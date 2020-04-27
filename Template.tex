@@ -4,17 +4,23 @@
 
 % Titelseite einfügen.
 \input{titlepage/titlepage.tex}
-\clearpage
+\cleardoublepage
 
 % Counter zurücksetzen. Römische Ziffern einstellen.
 \pagenumbering{Roman}
 \setcounter{page}{1}
 
+% Selbständigkeitserklärung einfügen.
+\input{Erklaerung/Erklaerung}
+
+% Abstract einfügen.
+\input{Abstract/Abstract}
+
 % Inhaltsverzeichnis generieren.
 \tableofcontents
 
 % Neue Seite. Counter zurücksetzen. Arabische Ziffern einstellen.
-\clearpage
+\cleardoublepage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
@@ -22,21 +28,22 @@
 \input{Chapters/Chapter1}
 
 % Literaturverzeichnis
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\printbibliography[title={Literaturverzeichnis}]
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography[title={}]
 
 % Abbildungsverzeichnis generieren.
-\clearpage
+\cleardoublepage
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
 % Tabellenverzeichnis generieren.
-%\clearpage
-%\addcontentsline{toc}{chapter}{\listtablename}
-%\listoftables
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 % Listingverzeichnis generieren.
-\clearpage
+\cleardoublepage
 %\renewcommand{\lstlistlistingname}{Listingverzeichnis}
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
